@@ -16,11 +16,6 @@ async def on_ready():
 	await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="NewbieWIRP"))
 	channel = bot.get_channel(1206546960929136641)
 	await channel.send("Ready to start")
-	# Auto to type to specific channel
-	#tiping = bot.get_channel(1206546960929136641)
-	#while True:
-	#	async with tiping.typing():
-	#		await asyncio.sleep(8)
 
 @bot.event
 async def on_message(message):
@@ -31,10 +26,10 @@ async def on_message(message):
 			async with message.channel.typing():	
 				await asyncio.sleep(2)
 				await message.reply('<#1150809090805739541>', mention_author=True)
-	if message.content == hai:
+	if message.content == "hai":
 		while True:
 			async with message.channel.typing():
-				await asyncio.sleep(10)
+				await asyncio.sleep(15)
 
 
 bot.run(token=data)
